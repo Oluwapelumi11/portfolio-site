@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { Project } from '../types';
-import { fakeProjects } from '../fake-data';
+import { Component,Input } from '@angular/core';
+import { Project } from '../project';
+
 
 @Component({
   selector: 'app-recent-angular',
@@ -8,16 +8,8 @@ import { fakeProjects } from '../fake-data';
   styleUrls: ['./recent-angular.component.css']
 })
 export class RecentAngularComponent {
-  projects : Project [] = [];
-
-  constructor () {}
-
-  ngOnInit (){
-    this.projects = fakeProjects;
-  }
-
-
-
+  @Input() project! : Project;
+  
 
 
 }
